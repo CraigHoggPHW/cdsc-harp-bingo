@@ -127,7 +127,7 @@ linelist <- linelist %>%
     case = any_symptom &
       !is.na(hours_since_party) &
       hours_since_party >= 0 &
-      hours_since_party <= 48
+      hours_since_party <= 24
   )
 
 # ---- Summary statistics ----
@@ -156,7 +156,7 @@ epicurve <- linelist %>%
   ggplot(aes(x = hours_since_party)) +
   geom_histogram(binwidth = 6, fill = "#2c7fb8", color = "white") +
   labs(
-    title = "Epidemic curve: Hours since party (cases)",
+    title = "Epidemic curve: Hours since NYE party (cases)",
     x = "Hours since party",
     y = "Frequency"
   ) +
