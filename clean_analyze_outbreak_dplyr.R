@@ -127,7 +127,7 @@ linelist <- linelist %>%
     case = any_symptom &
       !is.na(hours_since_party) &
       hours_since_party >= 0 &
-      hours_since_party <= 24
+      hours_since_party <= 48
   )
 
 # ---- Summary statistics ----
